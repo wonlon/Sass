@@ -1,0 +1,16 @@
+.guide{
+    @extend %body-a;
+    text-align: left;
+    .main{
+      .slides{
+        h2{
+          font-size: 48px;
+          font-weight: 300;
+          padding-bottom: 24px;
+        }
+      }
+    }
+    .complementary{
+  
+    }
+  }

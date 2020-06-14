@@ -1,0 +1,37 @@
+// 顺序很重要
+/*css的主文件，引入其他的css样式组件*/
+/*这里需要引入库，别的地方就能使用库里面的内容*/
+@import 
+"compass"
+,"susy"
+,"breakpoint"
+,"compass/reset"
+,"normalize-version"
+,"normalize/base"
+,"normalize/links"
+,"normalize/html5"
+;
+/*! helpers */ 
+
+@import "./helpers/variables";
+
+@import "./base/font"
+,"./base/page-base"
+;
+/*! layout */ 
+@import "./layout/main";
+/*! components */ 
+@import "./components/alerts"
+,"./components/pop-stripe"
+,"./components/banner"
+,"./components/page-header"
+,"./components/section-bottom"
+,"./components/contentinfo"
+;
+
+@import "./pages/index"
+, "pages/install"
+, "pages/guide"
+, "pages/community"
+, "pages/libsass"
+;

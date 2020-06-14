@@ -1,0 +1,46 @@
+.contentinfo{
+    font-size: 12px;
+    text-align: left;
+    color: #808c99;
+    ul{
+        padding: 0px;
+        display: table;
+        li{
+            list-style: none;
+            display: table-cell;
+            vertical-align: middle;
+        }
+    }
+    p{
+        padding-bottom: 4.5px;
+        margin: 0px;
+    }
+    a{
+        color: #484c55;
+        text-decoration: none;
+        &:visited{
+          color: #b37399;
+        }
+      }
+    .contentinfo-legal{
+        width: span(6);
+        @extend %mobile-style;
+    }
+    .contentinfo-tools{
+        width: span(4.9);
+        li{
+            padding-right: 24px;
+        }
+        @extend %mobile-style;
+    }
+    .contentinfo-social{
+        width: span(1.1);
+        @extend %mobile-style;
+    }
+    %mobile-style{
+        @include breakpoint($screen-xs){
+          display: list-item;
+          width: span(12);
+        }
+      }
+}

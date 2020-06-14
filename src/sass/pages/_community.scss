@@ -1,0 +1,13 @@
+.community{
+  .introduction{
+    margin: 0 auto;
+    max-width: 900px;
+    text-align: center;
+  }
+  .list-columns{
+    li{
+      display: inline-block;
+      @include span(6);
+    }
+  }
+}

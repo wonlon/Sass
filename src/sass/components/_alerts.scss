@@ -1,0 +1,30 @@
+.alert{
+    @include padding-leader(0.5);
+    @include padding-trailer(0.5);
+    background: $alert-background-color;
+    color: $alert-color;
+    p{
+        margin: 0px;
+        @include padding-trailer(0);
+    }
+    a{
+        text-decoration: none;
+        font-weight: 600;
+        color: azure;
+        &:hover, &:focus{
+            text-decoration: underline;
+        }
+    }
+    ul{
+        margin:0;
+        li{
+            list-style: none;
+            display: inline-block;
+            margin-right: 32px;
+        }
+    }
+    &.stickers{
+        background: #036;
+    }
+
+}

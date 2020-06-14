@@ -1,0 +1,21 @@
+@function stripes($position, $colors) {
+  /*! 三元运算符，compact将对象专为数组*/
+  $colors: if(type-of($colors) != "list", compact($colors), $colors);
+  $gradient: compact();
+  $len: length($colors);
+  /*! 保留浮点型值*/
+  $width: percentage(1 / $len);
+
+  @for $i from 1 through $len {
+    $current-color: nth($colors, $i);
+    $temp: $current-color ($width * ($i - 1)), $current-color ($width * $i);
+    /*! join 的第三份参数，默认值为 auto， comma为逗号， space为空格*/
+    $gradient: join($gradient, $temp, comma);
+  }
+  @return linear-gradient($position, $gradient);
+}
+
+.pop-stripe {
+  height: 0.25em;
+  @include background-image(stripes(left, $pop-stripe-colors));
+}

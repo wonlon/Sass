@@ -1,0 +1,41 @@
+%fill-img{
+  img{
+    max-width: 100%;
+    height: auto;
+  }
+}
+%body-a{
+  a{
+    color: #c69;
+    text-decoration: none;
+    &:hover, &:focus{
+      color: #036;
+    }
+    &:visited{
+      color: #b37399;
+    }
+  }
+}
+
+.content-primary{
+  @include span(8);
+}
+.content-secondary{
+  @include span(4);
+}
+.body{
+  color: #699;
+  text-align: left;
+  @extend %body-a;
+  .introduction{
+    font-size: 24px;
+    line-height: 36px;
+    padding-bottom: 36px;
+  }
+  ul{
+    padding-left: 0;
+  }
+  li{
+    list-style: none;
+  }
+}

@@ -1,0 +1,82 @@
+.banner{
+    margin: 0px;
+    @include padding-leader(0.5);
+    .site-brand{
+        /*栅格分为12等份，占三等分*/
+        @include span(3);
+        text-align: left;
+        margin: 0;
+        img{
+            height: 96px;
+            @include breakpoint($screen-xs){
+                height: 24px;
+            }
+        }
+    }
+    .navigation{
+        @include span(9);
+        text-align: right;
+        ul{
+            /*! li的margin，撑大了div，去掉margin*/
+            margin: 0;
+            li{
+                list-style: none;
+                display: inline-block;
+                line-height: 96px;
+            }
+        }
+        a{
+            padding: 0.75em 1em;
+            color: #c69;
+            font-weight: 600;
+            /*! 文字大写*/
+            text-transform: uppercase;
+            text-decoration: none;
+            &:visited{
+                color: #b37399;
+            }
+            &:hover,&:focus{
+                color: #036;
+            }
+        }
+        @include breakpoint($screen-xs){
+            display: none;
+          }
+    }
+    .banner-toggle{
+        display: none;
+    }
+    .container{
+        position: relative;
+    }
+    .banner-toggle{
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 16px;
+    
+        button{
+          border:none;
+          background: transparent;
+          cursor: pointer;
+          width: 48px;
+          height: 48px;
+        }
+    
+        .icon-bar{
+          margin-top: 6px;
+          margin-bottom: 6px;
+          display: block;
+          margin-right: auto;
+          margin-left: auto;
+          width: 32px;
+          height: 2px;
+          background-color: #c69;
+        }
+    
+        @include breakpoint($screen-xs){
+          display: block;
+        }
+      }  
+
+}
